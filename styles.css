@@ -271,7 +271,7 @@ main { max-width: 100%; padding: 0; }
 .etio-head {
   display: flex; align-items: center; gap: 10px; margin-bottom: 16px;
 }
-.etio-head i { flex-shrink: 0; width: 22px; height: 22px; stroke-width: 1.8; }
+.etio-head i { flex-shrink: 0; width: 22px; height: 22px; stroke-width: 1.8; stroke: currentColor; }
 .etio-card.bio .etio-head i   { color: var(--blue-deep); }
 .etio-card.psico .etio-head i { color: #5E4F84; }
 .etio-card.social .etio-head i { color: #3A7057; }
