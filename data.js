@@ -48,7 +48,7 @@ window.BRAIN = {
       "↓ Umbral de activación → respuesta de alarma exagerada ante estímulos neutros",
       "↑ Actividad basal amigdalina → estado de alerta crónico y dificultad para relajarse",
       "↑ Conectividad funcional con vmPFC → amplifica la rumia y el procesamiento negativo",
-      "Los ISRS normalizan la hiperreactividad amigdalina antes que el ánimo clínico (~2 semanas)"
+      "Los ISRS comienzan a normalizar la hiperreactividad amigdalina a las 3-4 semanas, frecuentemente antes de la mejoría clínica del ánimo"
     ]
   },
   hippocampus: {
@@ -58,9 +58,10 @@ window.BRAIN = {
     changes: [
       "↓ Volumen hipocampal (5–10%), proporcional al número de episodios no tratados",
       "↓ Neurogénesis adulta en el giro dentado, directamente inhibida por glucocorticoides",
-      "↓ BDNF → menor supervivencia, plasticidad sináptica y diferenciación neuronal",
+      "↓ BDNF → menor supervivencia, plasticidad sináptica y diferenciación neuronal; modificaciones epigenéticas en el promotor del gen BDNF",
+      "↓ Expresión de receptores glucocorticoides (NR3C1) por histone deacetilación y metilación de ADN, perpetuando la desregulación del eje HHA",
       "Quejas cognitivas: fallos de memoria, dificultad de aprendizaje y orientación espacial",
-      "El tratamiento antidepresivo eficaz restaura parcialmente los niveles de BDNF y la neurogénesis"
+      "El tratamiento antidepresivo eficaz restaura parcialmente los niveles de BDNF, la neurogénesis y revierte cambios epigenéticos"
     ]
   },
   hypothalamus: {
