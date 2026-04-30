@@ -271,10 +271,10 @@ main { max-width: 100%; padding: 0; }
 .etio-head {
   display: flex; align-items: center; gap: 10px; margin-bottom: 16px;
 }
-.etio-head i { flex-shrink: 0; width: 22px; height: 22px; stroke-width: 1.8; stroke: currentColor; }
-.etio-card.bio .etio-head i   { color: var(--blue-deep); }
-.etio-card.psico .etio-head i { color: #5E4F84; }
-.etio-card.social .etio-head i { color: #3A7057; }
+.etio-head svg { flex-shrink: 0; width: 22px; height: 22px; }
+.etio-card.bio .etio-head svg   { color: var(--blue-deep); stroke: var(--blue-deep); }
+.etio-card.psico .etio-head svg { color: #5E4F84; stroke: #5E4F84; }
+.etio-card.social .etio-head svg { color: #3A7057; stroke: #3A7057; }
 .etio-card h3 { margin-bottom: 0; }
 .etio-card ul { margin: 0; padding: 0; list-style: none; }
 .etio-card li { padding: 10px 0; border-bottom: 1px dashed var(--line); font-size: 14px; color: var(--ink-soft); }
