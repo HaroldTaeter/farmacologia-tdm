@@ -126,7 +126,7 @@ window.DRUG_CLASSES = [
     cautions: [
       "Aumentado riesgo de ideación suicida en <25 años (aviso de clase: aplica a todos los antidepresivos): monitorear",
       "Síndrome serotoninérgico (con IMAO, tramadol, triptanes)",
-      "Síndrome de discontinuación al suspender bruscamente · retirar gradualmente",
+      "Síndrome de discontinuación al suspender bruscamente (retirar gradualmente)",
       "Fluoxetina y paroxetina inhiben CYP2D6 (interacciones con tamoxifeno, codeína, β-bloqueantes, antipsicóticos); fluvoxamina inhibe CYP1A2 (teofilina, clozapina)",
       "Embarazo: preferir sertralina; evitar paroxetina",
       "Efecto clínico a las 2–4 semanas"
@@ -153,17 +153,17 @@ window.DRUG_CLASSES = [
     ],
     cautions: [
       "Aumentado riesgo de ideación suicida en <25 años (aviso de clase)",
-      "Síndrome de discontinuación marcado, especialmente con venlafaxina · retirar gradualmente",
+      "Síndrome de discontinuación marcado, especialmente con venlafaxina (retirar gradualmente)",
       "Monitorizar presión arterial",
       "Evitar en HTA no controlada",
       "Precaución hepática (duloxetina)",
-      "No combinar con IMAO · lavado 14 días"
+      "No combinar con IMAO"
     ]
   },
   {
     id: "tca",
     name: "Tricíclicos",
-    long: "Antidepresivos Tricíclicos (ATC)",
+    long: "Antidepresivos Tricíclicos",
     moa: "Inhiben recaptación 5-HT y NA + bloqueo M1, H1, α1. Eficacia comparable a ISRS pero peor tolerados y letales en sobredosis.",
     drugs: [
       { n: "Amitriptilina", sub: "sedante, dolor",     dose: "75–150", u: "mg/día oral", notes: "Dolor crónico, migraña profiláctica, insomnio." },
@@ -181,7 +181,7 @@ window.DRUG_CLASSES = [
     ],
     cautions: [
       "Aumentado riesgo de ideación suicida en <25 años (aviso de clase)",
-      "Síndrome de discontinuación con rebote colinérgico · retirar gradualmente",
+      "Síndrome de discontinuación con rebote colinérgico (retirar gradualmente)",
       "Letales en sobredosis (índice terapéutico estrecho)",
       "ECG previo en >40 años o cardiópatas",
       "Evitar en glaucoma ángulo cerrado, HPB, arritmias",
@@ -218,7 +218,7 @@ window.DRUG_CLASSES = [
   {
     id: "atypical",
     name: "Atípicos",
-    long: "Antidepresivos atípicos · mecanismos diversos",
+    long: "Antidepresivos atípicos",
     moa: "Mecanismos únicos fuera de las clases tradicionales. Útiles ante efectos adversos de ISRS o síntomas específicos.",
     drugs: [
       { n: "Bupropión",    sub: "IRDN · ↑ DA y NA",       dose: "150–450", u: "mg/día oral", notes: "No afecta función sexual ni peso. Cesación tabáquica.", tag: "sin DS" },
@@ -246,7 +246,7 @@ window.DRUG_CLASSES = [
   {
     id: "adjunct",
     name: "Adyuvantes",
-    long: "Potenciadores · ketamina · litio · antipsicóticos",
+    long: "Potenciadores · Ketamina · Litio · Antipsicóticos",
     moa: "Añadidos a un antidepresivo en depresión resistente o para fenómenos específicos.",
     drugs: [
       { n: "Litio",        sub: "potenciador clásico",   dose: "600–1200", u: "mg/día oral", notes: "Nivel sérico 0.4–0.8 mEq/L (potenciación antidepresiva). Disminuido riesgo suicida.", tag: "anti-suicida" },
@@ -265,7 +265,7 @@ window.DRUG_CLASSES = [
     ],
     cautions: [
       "Litio: monitor litemia, función renal y tiroidea cada 6 m",
-      "Esketamina: REMS · administrar en clínica",
+      "Esketamina: REMS (administrar en clínica)",
       "Antipsicóticos: vigilar peso, glucosa, lípidos",
       "Evaluar riesgo/beneficio en uso prolongado"
     ]
