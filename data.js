@@ -2,6 +2,12 @@
    Data layer · DSM-5, regiones cerebrales y farmacología
    ========================================================= */
 
+window.SYNAPSE_CAPTIONS = {
+  normal:     "Transmisión fisiológica: las vesículas presinápticas liberan monoaminas hacia la hendidura, donde se unen a receptores postsinápticos activando la señal descendente. El transportador SERT/NET recapta el exceso hacia el terminal presináptico, manteniendo el equilibrio.",
+  depression: "En la depresión, la disponibilidad de monoaminas en la hendidura está reducida —por menor liberación vesicular, mayor recaptación o ambos—, lo que limita la activación de receptores postsinápticos y deteriora los circuitos de ánimo, motivación y cognición.",
+  ssri:       "Los ISRS bloquean el transportador SERT en la membrana presináptica, impidiendo la recaptación de serotonina y aumentando su concentración en la hendidura. Esto potencia la activación de receptores postsinápticos, aunque el efecto clínico tarda 2–4 semanas por la desensibilización progresiva de autorreceptores 5-HT1A."
+};
+
 window.DSM5 = [
   { t: "Ánimo deprimido", s: "Tristeza, vacío, desesperanza (la mayor parte del día, casi cada día)", req: true },
   { t: "Anhedonia", s: "Pérdida marcada de interés o placer en casi todas las actividades", req: true },

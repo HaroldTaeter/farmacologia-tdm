@@ -2,102 +2,99 @@
    Data layer · DSM-5, regiones cerebrales y farmacología
    ========================================================= */
 
+window.SYNAPSE_CAPTIONS = {
+  normal:     "Funcionamiento normal: la neurona presináptica libera neurotransmisores que cruzan la hendidura sináptica y activan receptores en la neurona postsináptica. Después, los transportadores recogen el exceso y lo devuelven a la neurona presináptica.",
+  depression: "En la depresión hay menos neurotransmisores disponibles en la hendidura sináptica. Esto reduce la activación de los receptores y afecta a los circuitos del estado de ánimo, la motivación y el pensamiento.",
+  ssri:       "Los ISRS bloquean el transportador que recoge la serotonina, así esta se queda más tiempo en la hendidura sináptica y puede seguir activando los receptores. El efecto clínico tarda entre 2 y 4 semanas en aparecer."
+};
+
 window.DSM5 = [
-  { t: "Ánimo deprimido", s: "Tristeza, vacío, desesperanza (la mayor parte del día, casi cada día)", req: true },
-  { t: "Anhedonia", s: "Pérdida marcada de interés o placer en casi todas las actividades", req: true },
-  { t: "Cambios en peso / apetito", s: "Disminución o aumento significativo sin dieta (>5% en un mes)" },
-  { t: "Alteraciones del sueño", s: "Insomnio o hipersomnia casi diaria" },
-  { t: "Agitación / retardo psicomotor", s: "Observable por otros, no solo autoinformado" },
-  { t: "Fatiga", s: "Pérdida de energía casi diaria" },
-  { t: "Culpa / inutilidad", s: "Sentimientos excesivos o inapropiados, posiblemente delirantes" },
-  { t: "Disfunción cognitiva", s: "Disminución de concentración, indecisión casi diaria" },
-  { t: "Ideación suicida", s: "Pensamientos recurrentes de muerte, plan o intento" }
+  { t: "Ánimo deprimido", s: "Tristeza, vacío o desesperanza durante casi todo el día, casi todos los días", req: true },
+  { t: "Anhedonia", s: "Pérdida clara de interés o placer en casi todas las actividades", req: true },
+  { t: "Cambios en peso o apetito", s: "Pérdida o aumento importante de peso sin proponérselo" },
+  { t: "Alteraciones del sueño", s: "Insomnio o necesidad de dormir mucho más de lo habitual" },
+  { t: "Agitación o lentitud", s: "Cambios visibles desde fuera: moverse o hablar más rápido o más lento de lo normal" },
+  { t: "Fatiga", s: "Cansancio o falta de energía casi todos los días" },
+  { t: "Culpa o sentirse inútil", s: "Sentimientos excesivos o inapropiados de culpa o de no valer nada" },
+  { t: "Dificultades cognitivas", s: "Problemas para concentrarse, pensar o tomar decisiones" },
+  { t: "Pensamientos de muerte", s: "Pensamientos recurrentes sobre la muerte, ideación, plan o intento de suicidio" }
 ];
 
 window.BRAIN = {
   pfc: {
     name: "Corteza Prefrontal",
-    body: "Centro ejecutivo del cerebro: regula la planificación, la toma de decisiones, la memoria de trabajo y la regulación emocional descendente (top-down). En TDM se observa hipoactividad de la región dorsolateral (DLPFC), responsable del control cognitivo, e hiperactividad de la región ventromedial (vmPFC), implicada en el procesamiento autorreferencial y la valoración afectiva subjetiva como nodo de la red por defecto (DMN).",
+    body: "Es el centro de control del cerebro: planifica, toma decisiones y regula las emociones. En la depresión funciona peor de lo normal, lo que dificulta concentrarse, decidir y controlar pensamientos negativos.",
     nts: ["5HT", "NA", "DA"],
     changes: [
-      "Disminuida actividad DLPFC → déficit en concentración, toma de decisiones y memoria de trabajo",
-      "Disminuido volumen DLPFC con episodios repetidos (parcialmente reversible con tratamiento)",
-      "Aumentada hiperactividad vmPFC y red por defecto (DMN) → procesamiento autorreferencial negativo y sesgo cognitivo",
-      "Fallo de la regulación emocional top-down sobre amígdala e hipotálamo",
-      "Los antidepresivos eficaces restauran la actividad DLPFC a las 4–6 semanas"
+      "Menor actividad → problemas para concentrarse, decidir y mantener la atención",
+      "Pierde capacidad para regular las emociones desde arriba (sobre la amígdala)",
+      "Pueden aparecer cambios de volumen tras varios episodios, parcialmente reversibles con el tratamiento",
+      "Los antidepresivos eficaces restauran su actividad en pocas semanas"
     ]
   },
   acc: {
     name: "Corteza Cingulada Anterior",
-    body: "Nodo de interfaz entre emoción y cognición: detecta conflicto, asigna saliencia emocional y modula la atención. La división subgenual (sgACC, área de Brodmann 25) está crónicamente hiperactiva en TDM y correlaciona con la gravedad del ánimo deprimido; es diana de la estimulación cerebral profunda (DBS) en depresión resistente.",
+    body: "Conecta las emociones con el pensamiento: detecta conflictos y dirige la atención. En la depresión está sobreactivada, lo que ayuda a mantener el estado de ánimo bajo de forma persistente.",
     nts: ["5HT", "glutamato"],
     changes: [
-      "Aumentada actividad sgACC (área 25) → mantiene el estado de ánimo negativo de forma autosostenida",
-      "Disminuido volumen ACC dorsal → menor capacidad de detección de errores y resolución de conflicto",
-      "La hiperactividad sgACC predice respuesta a DBS y a ketamina",
-      "Diana de EMTr de baja frecuencia (inhibitoria) en protocolos clínicos experimentales",
-      "La normalización sgACC con antidepresivos eficaces es un biomarcador de respuesta terapéutica"
+      "Sobreactividad que mantiene el estado de ánimo negativo",
+      "Menor capacidad para detectar errores y resolver conflictos",
+      "Es una de las dianas principales de la estimulación cerebral profunda en depresión resistente",
+      "Los antidepresivos eficaces normalizan su actividad"
     ]
   },
   amygdala: {
     name: "Amígdala",
-    body: "Detector de amenaza y modulador del valor emocional de los estímulos. En TDM muestra hiperreactividad a estímulos negativos (caras tristes, palabras amenazantes) con umbral reducido y respuesta sostenida, contribuyendo al sesgo de atención negativa y a la comorbilidad ansiosa.",
+    body: "Es el detector de amenazas del cerebro: procesa el miedo y otras emociones intensas. En la depresión está hiperactiva, lo que explica el sesgo hacia lo negativo y la frecuente coexistencia con ansiedad.",
     nts: ["5HT", "NA"],
     changes: [
-      "Aumentada reactividad a caras tristes y estímulos amenazantes (evidencia de neuroimagen funcional)",
-      "Disminuido umbral de activación → respuesta de alarma exagerada ante estímulos neutros",
-      "Aumentada actividad basal amigdalina → estado de alerta crónico y dificultad para relajarse",
-      "Aumentada conectividad funcional con vmPFC → amplifica la rumia y el procesamiento negativo",
-      "Los ISRS comienzan a normalizar la hiperreactividad amigdalina a las 3-4 semanas, frecuentemente antes de la mejoría clínica del ánimo"
+      "Reacciona de forma exagerada a estímulos negativos (caras tristes, palabras amenazantes)",
+      "Mantiene a la persona en un estado de alerta crónico, con dificultad para relajarse",
+      "Amplifica los pensamientos negativos y la rumiación",
+      "Los ISRS empiezan a calmar la amígdala antes incluso de que mejore el estado de ánimo"
     ]
   },
   hippocampus: {
     name: "Hipocampo",
-    body: "Esencial para la memoria episódica, el aprendizaje contextual y el frenado del eje hipotálamo-hipófiso-adrenal (HHA) a través de receptores glucocorticoides. El exceso crónico de cortisol inhibe la neurogénesis y produce atrofia estructural, que se correlaciona con el número de episodios depresivos previos.",
+    body: "Es esencial para la memoria y el aprendizaje, y también ayuda a regular el eje del estrés. El exceso prolongado de cortisol lo daña, especialmente cuando los episodios depresivos se repiten o no se tratan.",
     nts: ["5HT", "glutamato"],
     changes: [
-      "Disminuido volumen hipocampal (5–10%), proporcional al número de episodios no tratados",
-      "Disminuida neurogénesis adulta en el giro dentado, directamente inhibida por glucocorticoides",
-      "Disminuida BDNF → menor supervivencia, plasticidad sináptica y diferenciación neuronal; modificaciones epigenéticas en el promotor del gen BDNF",
-      "Disminuida expresión de receptores glucocorticoides (NR3C1) por histone deacetilación y metilación de ADN, perpetuando la desregulación del eje HHA",
-      "Quejas cognitivas: fallos de memoria, dificultad de aprendizaje y orientación espacial",
-      "El tratamiento antidepresivo eficaz restaura parcialmente los niveles de BDNF, la neurogénesis y revierte cambios epigenéticos"
+      "Reducción de su tamaño, proporcional al número de episodios sin tratar",
+      "Menor formación de neuronas nuevas (neurogénesis), bloqueada por el cortisol elevado",
+      "Quejas frecuentes: olvidos, dificultad para aprender o ubicarse",
+      "El tratamiento eficaz ayuda a recuperar parcialmente la neurogénesis"
     ]
   },
   hypothalamus: {
-    name: "Hipotálamo · Eje HHA",
-    body: "Coordina la respuesta al estrés a través del eje hipotálamo-hipófiso-adrenal: CRH hipotalámico → ACTH hipofisaria → cortisol suprarrenal. En TDM el feedback negativo glucocorticoide está desensibilizado, perpetuando hipercortisolemia crónica con consecuencias sobre el sueño, el apetito, la inmunidad y el volumen cerebral.",
+    name: "Hipotálamo · Eje del estrés",
+    body: "Coordina la respuesta al estrés a través del eje del estrés (hipotálamo → hipófisis → glándulas suprarrenales → cortisol). En la depresión este sistema queda activado de forma crónica, manteniendo niveles altos de cortisol con consecuencias sobre el sueño, el apetito y el cerebro.",
     nts: ["CRH", "cortisol"],
     changes: [
-      "Aumentada CRH hipotalámica → activación mantenida del eje HHA independientemente del estrés real",
-      "Hipercortisolemia crónica → neurotoxicidad hipocampal, inmunosupresión e inflamación",
-      "Test de supresión con dexametasona positivo (no supresión) en ~40% de los pacientes con TDM",
-      "Alteración de la arquitectura del sueño: disminuido sueño de ondas lentas, aumentada REM precoz, insomnio de madrugada",
-      "Desregulación del apetito y el peso corporal por acción sobre núcleos hipotalámicos laterales y arqueado"
+      "Activación crónica del eje del estrés, incluso sin amenaza real",
+      "Niveles elevados de cortisol que dañan el hipocampo y favorecen la inflamación",
+      "Alteraciones del sueño: insomnio, despertar precoz, sueño poco reparador",
+      "Cambios en el apetito y el peso corporal"
     ]
   },
   raphe: {
     name: "Núcleos del Rafe",
-    body: "Fuente principal de serotonina (5-HT) cerebral, con proyecciones difusas a córtex prefrontal, amígdala, hipocampo y ganglios basales. El rafe dorsal regula el estado de ánimo y la ansiedad; el rafe mediano proyecta principalmente al hipocampo y septum, modulando el ritmo theta y procesos cognitivos asociados. Los ISRS actúan aquí bloqueando el transportador SERT, pero la desensibilización lenta de autorreceptores 5-HT1A explica la latencia antidepresiva de 2–4 semanas.",
+    body: "Son la principal fuente de serotonina del cerebro y envían proyecciones a casi todas las regiones implicadas en el estado de ánimo. Los ISRS actúan aquí bloqueando la recaptación de serotonina.",
     nts: ["5HT"],
     changes: [
-      "Disminuida síntesis y disponibilidad sináptica de 5-HT en circuitos límbicos y corticales",
-      "Autorreceptores 5-HT1A somatodendríticos hiperactivos → inhiben el disparo serotoninérgico de los propios núcleos del rafe",
-      "Los ISRS bloquean SERT → acumulación de 5-HT en el axón terminal, pero con efecto inicial amortiguado por los autorreceptores",
-      "Desensibilización progresiva de autorreceptores 5-HT1A (2–4 semanas) → aumentada 5-HT eficaz en sinapsis diana",
-      "La latencia antidepresiva refleja exactamente el tiempo necesario para esa desensibilización"
+      "Menor cantidad y disponibilidad de serotonina en el cerebro",
+      "Los ISRS bloquean el transportador de serotonina, aumentando su disponibilidad",
+      "El cerebro tarda 2–4 semanas en adaptarse a este aumento, lo que explica por qué los antidepresivos no funcionan de inmediato"
     ]
   },
   accumbens: {
     name: "Núcleo Accumbens",
-    body: "Nodo central del circuito de recompensa mesolímbico (VTA → accumbens). Integra señales dopaminérgicas de predicción de recompensa con información emocional de amígdala e hipocampo. Su hipofunción dopaminérgica es la base neurobiológica de la anhedonia, uno de los dos síntomas nucleares de la TDM.",
+    body: "Es el centro del circuito de recompensa del cerebro y funciona principalmente con dopamina. Su menor funcionamiento explica la anhedonia, uno de los dos síntomas principales de la depresión.",
     nts: ["DA"],
     changes: [
-      "Disminuida liberación de DA ante estímulos de recompensa → incapacidad para sentir placer (anhedonia hedónica)",
-      "Disminuida motivación anticipatoria: el esfuerzo para obtener recompensas parece desproporcionado o sin sentido",
-      "Disminuida conectividad funcional con VTA y corteza orbitofrontal (OFC)",
-      "Bupropión y agomelatina actúan parcialmente sobre este circuito (aumentada DA y modulación mesolímbica)",
-      "La resolución de la anhedonia suele ser más tardía que la mejoría del ánimo bajo tratamiento antidepresivo"
+      "Menor liberación de dopamina ante recompensas → incapacidad para sentir placer (anhedonia)",
+      "Falta de motivación: el esfuerzo necesario para conseguir recompensas parece excesivo",
+      "Algunos antidepresivos (bupropión, agomelatina) actúan sobre este circuito",
+      "La anhedonia suele tardar más en mejorar que el estado de ánimo durante el tratamiento"
     ]
   }
 };
