@@ -34,6 +34,8 @@ body {
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
   overflow-x: clip;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .mono { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 11.5px; letter-spacing: 0.02em; color: var(--ink-mute); text-transform: lowercase; }
